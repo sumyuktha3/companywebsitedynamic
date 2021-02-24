@@ -1,4 +1,4 @@
-# Dynamic Website Design for a Manufacturing Company
+Dynamic Website Design for a Manufacturing Company
 ## AIM:
 To design a dynamic website for a chip manufacturing company.
 
@@ -25,38 +25,26 @@ Publish the website in the given URL.
 ## PROGRAM:
 ### base.html
 
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "website/base.html" %}
 
-<head>
-    <title> ANODE Private Limited </title>
-    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
-    <link rel = "icon" href ="{% static 'img/anodee.jpg' %}" type = "image/x-icon"> 
-              
-</head>
-
-<body>
-    <div class="container">
-    <div class="banner">
-        ANODE Private Limited
-    </div>
-    <div class="menu">
-        <div class="menuitem"><a href="/home">Home</a></div> 
-        <div class="menuitem"><a href="/products">Products</a></div> 
-        <div class="menuitem"><a href="/people">People</a></div>
-        <div class="menuitem"><a href="/contactus">Contact Us</a></div> 
-    </div><div class="content">
-    {% block content %}    
-    {% endblock  %}
-    </div>
-    <div class="footer">
-        Copyright © 2021 ANODE Private Limited, Developed by S.SUMYUKTHA RANI
+{% block content %}
+    <div class="homecontent">    
+    <h1>About Us</h1>
+    <img src="/static/img/anode.jpg" alt="Building">
+    <div class="contenttext">
+    ANODE Pvt Ltd, provides a broad range of semiconductor and infrastructure software applications that serve the data center, networking, software, broadband, wireless, and storage and industrial markets. Common applications for its products include: data center networking, home connectivity, broadband access, telecommunications equipment, smartphones, base stations, data center servers and storage, factory automation, power generation and alternative energy systems, displays, and mainframe operations and management, and application software development. Some of Silicon's core technologies and products include:
+    <ul>
+        <li>Memory Chips</li>
+        <li>SATA HDD</li>
+        <li>SATA SSD </li>
+        <li>Broadband Modems</li>
+        <li>Wifi Devices</li>
+        <li>Switching Devices</li>
+        <li>Optical Sensors</li>
+    </ul> 
     </div>
     </div>
-</body>
-
-</html>
+{% endblock  %}
 
 ### home.html
 
@@ -124,8 +112,7 @@ Publish the website in the given URL.
 </div>
 {% endblock  %}
 
-
-### CONTACTUS.HTML:
+### CONTACT.HTML:
 
 {% extends "website/base.html" %}
 
@@ -165,12 +152,24 @@ return true; }
 </form>
 {% endblock  %}
 
+{% endblock  %}
+
 ## OUTPUT:
-![output](./static/img/o1.png)
+![output](./static/img/3.JPG)
 
-![output](./static/img/anode.jpg)
+![output](./static/img/4.JPG)
 
-![output](./static/img/anodee.jpg)
+![output](./static/img/5.JPG)
+
+![output](./static/img/6.JPG)
+
+![output](./static/img/7.JPG)
+
+![output](./static/img/8.JPG)
+
+![output](./static/img/9.JPG)
+
+![output](./static/img/10.JPG)
 
 ## RESULT:
 Thus a website is designed for the chip manufacturing company and is hosted in the URL http://sumyuktha.student.saveetha.in:8000/.
